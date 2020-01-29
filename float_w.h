@@ -18,6 +18,20 @@ public class float_w : public Object {
             val_ = val;
         }
 
+        ~float_w() {
+
+        }
+
+        //Returns true if this float_w equals the Object
+        virtual bool equals(Object* other) {
+
+        }
+
+        //Returns the hashcode
+        size_t hash() {
+
+        }
+
         // Return value of this float_w
         float get() {
             return 0;
