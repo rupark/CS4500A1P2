@@ -18,6 +18,20 @@ public class bool_w : public Object {
             val_ = val;
         }
 
+        ~bool_w() {
+
+        }
+
+        //Returns true if this bool_w equals the Object
+        virtual bool equals(Object* other) {
+
+        }
+
+        //Returns the hashcode
+        size_t hash() {
+
+        }
+
         // Return value of this bool_w
         bool get() {
             return false;

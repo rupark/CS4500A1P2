@@ -18,6 +18,20 @@ public class int_w : public Object {
             val_ = val;
         }
 
+        ~int_w() {
+
+        }
+
+        //Returns true if this int_w equals the Object
+        virtual bool equals(Object* other) {
+
+        }
+
+        //Returns the hashcode
+        size_t hash() {
+
+        }
+
         // Return value of this int_w
         int get() {
             return 0;
