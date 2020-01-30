@@ -14,9 +14,17 @@ void test1() {
   a->set(1, s2);
   a->set(0, s3);
   if ((a->get(0)->equals(s3) && (a->get(1)->equals(s2)))) {
-    std::cout << "Pass 1";
+    std::cout << "Pass 1" << std::endl;
+    delete a;
+    delete s1;
+    delete s2;
+    delete s3;
   } else {
-    std::cout << "Fail 1";
+    std::cout << "Fail 1" << std::endl;
+    delete a;
+    delete s1;
+    delete s2;
+    delete s3;
     exit(0);
   }
 }
@@ -28,9 +36,15 @@ void test2() {
   a->set(0, s1);
   a->set(1, s2);
   if (a->length() == 2) {
-    std::cout << "Pass 2";
+    std::cout << "Pass 2" << std::endl;
+    delete a;
+    delete s1;
+    delete s2;
   } else {
-    std::cout << "Fail 2";
+    std::cout << "Fail 2" << std::endl;
+    delete a;
+    delete s1;
+    delete s2;
     exit(0);
   }
 }
@@ -38,9 +52,11 @@ void test2() {
 void test3() {
   Array* a = new Array(10);
   if (a->length() == 0) {
-    std::cout << "Pass 3";
+    std::cout << "Pass 3" << std::endl;
+    delete a;
   } else {
-    std::cout << "Fail 3";
+    std::cout << "Fail 3" << std::endl;
+    delete a;
     exit(0);
   }
 }
@@ -53,9 +69,15 @@ void test4() {
   a->set(0, c);
   a->set(1, d);
   if ((a->get(0)->equals(c) && (a->get(1)->equals(d)) && a->length() == 2)) {
-    std::cout << "Pass 4";
+    std::cout << "Pass 4" << std::endl;
+    delete a;
+    delete c;
+    delete d;
   } else {
-    std::cout << "Fail 4";
+    std::cout << "Fail 4" << std::endl;
+    delete a;
+    delete c;
+    delete d;
     exit(0);
   }
 }
