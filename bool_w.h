@@ -9,13 +9,13 @@
 /*
  * Wrapper class for bool.
  */
-public class bool_w : public Object {
+class bool_w : public Object {
 
     public:
         bool val_;
 
         bool_w (bool val) {
-            val_ = val;
+
         }
 
         ~bool_w() {
@@ -28,12 +28,12 @@ public class bool_w : public Object {
         }
 
         //Returns the hashcode
-        size_t hash() {
+        virtual size_t hash() {
 
         }
 
         // Return value of this bool_w
         bool get() {
-            return false;
+
         }
 };

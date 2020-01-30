@@ -25,12 +25,12 @@ class String: public Object {
                 }
 
 		//Generating Hash Code
-                size_t hash_me() {
+                virtual size_t hash() {
 
                 }
 
 		//Return true if this String equals the Object
-                bool equals(Object* o) {
+                virtual bool equals(Object* o) {
 
                 }
 

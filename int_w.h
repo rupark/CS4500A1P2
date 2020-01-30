@@ -9,13 +9,13 @@
 /*
  * Wrapper class for int.
  */
-public class int_w : public Object {
+class int_w : public Object {
 
     public:
         int val_;
 
         int_w (int val) {
-            val_ = val;
+
         }
 
         ~int_w() {
@@ -28,7 +28,7 @@ public class int_w : public Object {
         }
 
         //Returns the hashcode
-        size_t hash() {
+        virtual size_t hash() {
 
         }
 

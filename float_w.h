@@ -9,13 +9,13 @@
 /*
  * Wrapper class for float.
  */
-public class float_w : public Object {
+class float_w : public Object {
 
     public:
         float val_;
 
         float_w (float val) {
-            val_ = val;
+
         }
 
         ~float_w() {
@@ -28,12 +28,12 @@ public class float_w : public Object {
         }
 
         //Returns the hashcode
-        size_t hash() {
+        virtual size_t hash() {
 
         }
 
         // Return value of this float_w
         float get() {
-            return 0;
+
         }
 };

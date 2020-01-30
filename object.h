@@ -21,7 +21,7 @@ class Object {
                 }
 
 		//Returns the hashcode
-                size_t hash() {
+                virtual size_t hash() {
 
                 }
 };
