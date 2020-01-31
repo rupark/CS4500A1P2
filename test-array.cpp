@@ -77,7 +77,7 @@ void test5() {
   a->push_back(c);
   a->push_back(d);
 
-  if ((a->size_ == 3) && (a->get(0)->equals(b))
+  if ((a->length() == 3) && (a->get(0)->equals(b))
     && (a->get(1)->equals(c)) && (a->get(2)->equals(d))) {
       std::cout << "Pass 5" << std::endl;
   } else {
@@ -102,7 +102,7 @@ void test6() {
   String* f = new String(a->to_string());
   Array* a2 = new Array(10);
   String* g = new String("{}");
-  String* h = a2->to_string();
+  String* h = new String(a2->to_string());
 
   if (e->equals(f) && g->equals(h)) {
     std::cout << "Pass 6" << std::endl;
