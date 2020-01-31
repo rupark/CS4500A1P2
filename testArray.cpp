@@ -2,6 +2,9 @@
 #include "object.h"  // Your file with the CwC declaration of Object
 #include "string.h"  // Your file with the String class
 #include "array.h"
+#include "int_w.h"
+#include "bool_w.h"
+#include "float_w.h"
 
 #include <iostream>
 
@@ -164,15 +167,102 @@ void test8() {
   a1->push_back(s1);
   a2->push_back(s2);
   if (a1->hash() == a2->hash()) {
-    std::cout << "Pass 7" << std::endl;
+    std::cout << "Pass 8" << std::endl;
   } else {
-    std::cout << "Fail 7" << std::endl;
+    std::cout << "Fail 8" << std::endl;
   }
   delete a1;
   delete a2;
   delete s1;
   delete s2;
 }
+
+// test int_w
+void test9() {
+    Array* a1 = new Array(10);
+    Array* a2 = new Array(10);
+    int_w* s1 = new int_w(1);
+    int_w* s2 = new int_w(1);
+    int_w* s3 = new int_w(3);
+    a1->push_back(s1);
+    a2->push_back(s2);
+    if (a1->get(0)->equals(a2->get(0)) && (a1->get(0)->hash_ == a2->get(0)->hash_))
+    && !(a1->get(0)->equals(s3))) {
+        std::cout << "Pass 9" << std::endl;
+    } else {
+        std::cout << "Fail 9" << std::endl;
+    }
+    delete a1;
+    delete a2;
+    delete s1;
+    delete s2;
+}
+
+//float_w
+void test10() {
+    Array* a1 = new Array(10);
+    Array* a2 = new Array(10);
+    float_w* s1 = new float_w(2.1);
+    float_w* s2 = new float_w(2.1);
+    float_w* s3 = new float_w(3.4);
+    a1->push_back(s1);
+    a2->push_back(s2);
+    if (a1->get(0)->equals(a2->get(0)) && (a1->get(0)->hash_ == a2->get(0)->hash_))
+    && !(a1->get(0)->equals(s3))) {
+        std::cout << "Pass 10" << std::endl;
+    } else {
+        std::cout << "Fail 10" << std::endl;
+    }
+    delete a1;
+    delete a2;
+    delete s1;
+    delete s2;
+}
+
+//bool_w
+void test11() {
+    Array* a1 = new Array(10);
+    Array* a2 = new Array(10);
+    bool_w* s1 = new bool_w(true);
+    bool_w* s2 = new bool_w(true);
+    bool_w* s3 = new bool_w(false);
+    a1->push_back(s1);
+    a2->push_back(s2);
+    if (a1->get(0)->equals(a2->get(0)) && (a1->get(0)->hash_ == a2->get(0)->hash_)
+    && !(a1->get(0)->equals(s3))) {
+        std::cout << "Pass 11" << std::endl;
+    } else {
+        std::cout << "Fail 11" << std::endl;
+    }
+    delete a1;
+    delete a2;
+    delete s1;
+    delete s2;
+}
+
+
+// testing Object
+void test12() {
+    Array* a = new Array(10);
+    Object* b = new Object();
+    Object* c = new Object();
+    Object* d = new Object();
+    a->push_back(b);
+    a->push_back(c);
+    a->push_back(d);
+
+    if (a->length() == 3) {
+        std::cout << "Pass 5" << std::endl;
+    } else {
+        std::cout << "Fail 5" << std::endl;
+    }
+
+    delete a;
+    delete b;
+    delete c;
+    delete d;
+}
+
 
 int main() {
   test1();
@@ -183,5 +273,9 @@ int main() {
   test6();
   test7();
   test8();
+  test9();
+  test10();
+  test11();
+  test12();
   return 0;
 }
